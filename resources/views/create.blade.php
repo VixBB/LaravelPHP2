@@ -38,12 +38,6 @@
                 <div class="card-body">
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Foto</label>
-                    <input type="file" class="form-control" id="exampleInputEmail1" name="photo">
-                    @error('photo')
-                    <small>{{$message}}</small>
-                    @enderror
-                  </div>
                   
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama</label>

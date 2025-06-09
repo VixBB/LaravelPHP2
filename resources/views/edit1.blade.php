@@ -41,7 +41,7 @@
                     <label for="gambar">Gambar</label>
                     @if($data->gambar)
                       <div>
-                        <img src="{{ asset('storage/gambar-laptop/' . $data->gambar) }}" alt="Gambar Laptop" style="max-width: 200px; max-height: 150px;">
+                        <img src="{{ secure_asset('storage/gambar-laptop/' . $data->gambar) }}" alt="Gambar Laptop" style="max-width: 200px; max-height: 150px;">
                       </div>
                     @endif
                     <input type="file" class="form-control" id="gambar" name="gambar">

@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>{{$laptop->merk}}</title>
-    <link rel="stylesheet" href="{{ asset('css/moredetail.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/moredetail.css') }}">
 </head>
 <body>
 
     <nav class="navbar">
     <a href="{{route('home')}}">
     <div class="logo">
-            <img src="{{ asset('aset/logo.png') }}" alt="Logo">
+            <img src="{{ secure_asset('aset/logo.png') }}" alt="Logo">
             <span>InventarisRPL</span>
         </div>
     </a>
         <a href="{{ route('profile')}}" class="nav-link">
         <div class="user-info">
             <span>{{$data->name}}</span>
-            <img src="{{ asset('aset/user.png') }}" alt="User Icon" class="user-icon">
+            <img src="{{ secure_asset('aset/user.png') }}" alt="User Icon" class="user-icon">
         </div>
         </a>
     </nav>
 
     <div class="back-button" onclick="window.history.back()">
-    <img src="{{ asset('aset/back.png') }}" alt="Back">
+    <img src="{{ secure_asset('aset/back.png') }}" alt="Back">
     </div>
 
     <div class="detail-container">
         <h2 class="detail-title">{{$laptop->merk}}</h2>
 
         <div class="detail-image">
-            <img src="{{ asset('storage/gambar-laptop/'. $laptop->gambar) }}" alt="{{ $laptop->merk}}">
+            <img src="{{ secure_asset('storage/gambar-laptop/'. $laptop->gambar) }}" alt="{{ $laptop->merk}}">
         </div>
 
         <div class="detail-specs">
@@ -73,7 +73,7 @@
     <div class="footer-content">
     <p class="footer-text">© Copyrigth InventarisRPL 2025</p>
     <div class="footer-logo">
-      <img src="{{ asset('aset/logo.png') }}" alt=Logo InventarisRPL">
+      <img src="{{ secure_asset('aset/logo.png') }}" alt=Logo InventarisRPL">
     </div>
   </div>
 </footer>

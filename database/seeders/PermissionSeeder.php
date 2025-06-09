@@ -49,11 +49,8 @@ class PermissionSeeder extends Seeder
         $role_siswa->givePermissionTo($permission2);
 
         $user = User::find(1); 
-        $user2 = User::find(17); 
-        
 
         $user->assignRole(['admin']);
-        $user2->assignRole(['siswa']);
         
     }
 }

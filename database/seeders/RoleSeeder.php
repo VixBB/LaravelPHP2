@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\DB;
 
 class RoleSeeder extends Seeder
 {
@@ -13,19 +14,16 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        Role::UpdateOrCreate(
-            ['name' => 'admin'],
-            ['name' => 'admin']
-        );
+        
 
-        Role::UpdateOrCreate(
-            ['name' => 'siswa'],
-            ['name' => 'siswa']
-        );
+$oldData = DB::connection('old_mysql')->table('old_table_name')->get();
 
-        Role::UpdateOrCreate(
-            ['name' => 'guest'],
-            ['name' => 'guest']
-        );
+foreach ($oldData as $row) {
+    DB::table('new_table_name')->insert([
+        'column1' => $row->column1,
+        'column2' => $row->column2,
+        // map columns accordingly
+    ]);
+}
     }
 }

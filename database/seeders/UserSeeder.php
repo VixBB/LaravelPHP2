@@ -15,10 +15,10 @@ class UserSeeder extends Seeder
     {
         User::create(
             [
-                'name' => 'siswa2',
-                'email' => 'siswa2@gmail.com',
-                'nis' => '1123456',
-                'nisn' => '11234567890',
+                'name' => 'admin',
+                'email' => 'admin@gmail.com',
+                'nis' => '11111',
+                'nisn' => '11111111111',
                 'password' => bcrypt('123'),
             ]
             );

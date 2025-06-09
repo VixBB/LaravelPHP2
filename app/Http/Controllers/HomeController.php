@@ -88,7 +88,6 @@ class HomeController extends Controller
 
     public function store(Request $request) {
         $validator = FacadesValidator::make($request->all(),[
-            'photo' => 'required|mimes:jpeg,jpg,png|max:2048',
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required',
@@ -96,11 +95,6 @@ class HomeController extends Controller
             'nisn' => 'nullable|string|max:255',
         ]);
 
-        $photo = $request->file('photo');
-        $filename = date('Y-m-d').$photo->getClientOriginalName();
-        $path = 'photo-user/'.$filename;
-
-        Storage::disk('public')->put($path,file_get_contents($photo));
 
         if ($validator->fails()) {
             return redirect()->back()->withInput()->withErrors($validator);
@@ -109,7 +103,6 @@ class HomeController extends Controller
         $data ['email'] = $request -> email;
         $data ['name'] = $request -> name;
         $data ['password'] = bcrypt($request -> password);
-        $data ['image'] = $filename;
         $data['nis'] = $request->nis;
         $data['nisn'] = $request->nisn;
         User::create($data);

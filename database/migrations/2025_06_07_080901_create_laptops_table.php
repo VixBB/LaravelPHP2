@@ -16,7 +16,7 @@ return new class extends Migration
         $table->string('kode_laptop')->unique(); // Contoh: LAP001
         $table->string('merk'); // Contoh: ASUS, HP, Lenovo
         $table->string('tipe'); // Contoh: VivoBook, ThinkPad
-        $table->string('Deskripsi');
+        $table->text('Deskripsi');
         $table->string('gambar')->nullable(); // Path gambar laptop
         $table->enum('status', ['tersedia', 'dipinjam'])->default('tersedia');
         $table->timestamps();
