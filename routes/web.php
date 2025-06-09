@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-route::get('/', [HomeController::class, 'home'])->name('home')->middleware('auth');
-route::get('/login', [LoginController::class, 'index'])->name('login');
+route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');
+route::get('/', [LoginController::class, 'index'])->name('login');
 route::post('/login-proses', [LoginController::class, 'login_proses'])->name('login-proses');
 route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');
@@ -29,8 +29,7 @@ route::post('/profile/update', [HomeController::class, 'updateProfile'])->name('
 
 
 
-route::group(['prefix' => 'admin','middleware' => ['auth','role:admin|siswa'], 'as' => 'admin.'], function(){
-    route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+route::group(['prefix' => 'admin','middleware' => ['auth','role:admin'], 'as' => 'admin.'], function(){
 
     route::get('/laptop', [HomeController::class, 'index2'])->name('index2');
     route::get('/laptop/create', [HomeController::class, 'create1'])->name('laptop.create1');
@@ -49,7 +48,6 @@ route::group(['prefix' => 'admin','middleware' => ['auth','role:admin|siswa'], '
     route::get('/user', [HomeController::class, 'index'])->name('index');
     route::get('/create', [HomeController::class, 'create'])->name('user.create');
     route::post('/store', [HomeController::class, 'store'])->name('user.store');
-
     route::get('/edit/{id}', [HomeController::class, 'edit'])->name('user.edit');
     route::put('/update/{id}', [HomeController::class, 'update'])->name('user.update');
     route::delete('/delete/{id}', [HomeController::class, 'delete'])->name('user.delete');

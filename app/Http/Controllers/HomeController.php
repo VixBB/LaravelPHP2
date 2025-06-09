@@ -17,10 +17,6 @@ class HomeController extends Controller
     //     $this->middleware(['permission:view_dashboard'])->only('dashboard');
     // }
 
-    public function dashboard()
-    {
-            return view('dashboard');
-    }
 
     public function home()
     {
@@ -28,9 +24,9 @@ class HomeController extends Controller
         $laptops = Laptop::all();
 
         if (auth()->user()->can('view_dashboard')) {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.index3');
         }
-        
+
          return view('home', compact('laptops','data')); // Pass laptops variable to the view
     }
 
