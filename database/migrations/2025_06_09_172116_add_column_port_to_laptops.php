@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::table('laptops', function (Blueprint $table) {
         $table->string('port'); 
-    });
-    }
 
-    /**
+        });
+    }
+/**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        //
+        Schema::table('laptops', function (Blueprint $table) {
+            //
+        });
     }
 };

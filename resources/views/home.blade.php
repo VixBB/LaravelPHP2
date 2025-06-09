@@ -52,7 +52,7 @@
         <h3>{{ $laptop->merk}}</h3>
         <div class="laptop-image">
             @if($laptop->gambar)
-                <img src="{{ secure_asset('storage/gambar-laptop/' . $laptop->gambar) }}" alt="{{ $laptop->merk }} {{ $laptop->tipe }}" >
+                <img src="{{ asset('storage/gambar-laptop/' . $laptop->gambar) }}" alt="{{ $laptop->merk }} {{ $laptop->tipe }}" >
             @else
                 <img src="{{ secure_asset('aset/laptop.png') }}" alt="Default Laptop Image">
             @endif

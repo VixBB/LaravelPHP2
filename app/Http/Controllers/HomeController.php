@@ -136,7 +136,7 @@ class HomeController extends Controller
             $nextId = $latestLaptop ? $latestLaptop->id + 1 : 1;
             $kodeLaptop = 'LP' . str_pad($nextId, 4, '0', STR_PAD_LEFT);
 
-            $data = $request->only(['merk', 'tipe', 'Deskripsi', 'status', 'cpu', 'gpu', 'ram', 'storage', 'port']);
+            $data = $request->only(['merk', 'tipe', 'deskripsi', 'status', 'cpu', 'gpu', 'ram', 'storage', 'port']);
             $data['kode_laptop'] = $kodeLaptop; // Tambahkan kode otomatis
 
 
