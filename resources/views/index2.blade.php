@@ -63,7 +63,7 @@
                       <td>{{ $loop->iteration }}</td>
                       <td>
                         @if($d->gambar)
-                          <img src="{{ asset('storage/gambar-laptop/' .$d->gambar) }}" width="100" alt="Gambar Laptop">
+                          <img src="{{ secure_asset('storage/gambar-laptop/' .$d->gambar) }}" width="100" alt="Gambar Laptop">
                         @else
                           No Image
                         @endif

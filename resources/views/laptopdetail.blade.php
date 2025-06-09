@@ -30,7 +30,7 @@
         <h2 class="detail-title">{{$laptop->merk}}</h2>
 
         <div class="detail-image">
-            <img src="{{ asset('storage/gambar-laptop/'. $laptop->gambar) }}" alt="{{ $laptop->merk}}">
+            <img src="{{ secure_asset('storage/gambar-laptop/'. $laptop->gambar) }}" alt="{{ $laptop->merk}}">
         </div>
 
         <div class="detail-specs">
