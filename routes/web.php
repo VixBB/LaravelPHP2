@@ -19,8 +19,10 @@ use Illuminate\Support\Facades\Auth;
 route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');
 route::get('/', [LoginController::class, 'index'])->name('login');
 route::post('/login-proses', [LoginController::class, 'login_proses'])->name('login-proses');
+Route::get('/login-proses', function () {
+    return redirect()->route('login');
+});
 route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');
 route::get('/laptopdetail/{id}', [HomeController::class, 'laptopdetail'])->name('laptopdetail');
 route::post('/laptopdetail/pinjam', [HomeController::class, 'pinjam'])->name('pinjam');
 
