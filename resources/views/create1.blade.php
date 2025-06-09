@@ -102,8 +102,8 @@
 
                   <div class="form-group">
                     <label for="deskripsi">deskripsi</label>
-                    <input type="file" class="form-control" id="deskripsi" name="deskripsi">
-                    @error('deskripsi')
+                    <textarea class="form-control" id="deskripsi" name="deskripsi" placeholder="deskripsi">{{ old('deskripsi') }}</textarea>
+                    @error('port')
                     <small class="text-danger">{{ $message }}</small>
                     @enderror
                   </div>

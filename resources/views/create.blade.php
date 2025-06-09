@@ -41,7 +41,7 @@
                   
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nama</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Enter email">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Enter nama">
                     @error('name')
                     <small>{{$message}}</small>
                     @enderror
@@ -49,7 +49,7 @@
                   
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter nama">
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
                     @error('email')
                     <small>{{$message}}</small>
                     @enderror
