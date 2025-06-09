@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login InventarisRPL</title>
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/login.css') }}">
 </head>
 <body>
     <div class="login-container">
@@ -35,11 +35,11 @@
             </div>
         </div>
         <div class="login-right">
-            <img src="{{ asset('aset/imgg.png') }}" alt="Login Illustration">
+            <img src="{{ secure_asset('aset/imgg.png') }}" alt="Login Illustration">
         </div>
     </div>
 
-    <script src="{{ asset('js/login.js') }}"></script>
+    <script src="{{ secure_asset('js/login.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @if( $message = Session::get('failed'))
         <script>
