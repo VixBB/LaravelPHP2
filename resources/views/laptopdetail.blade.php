@@ -14,7 +14,7 @@
             <span>InventarisRPL</span>
         </div>
     </a>
-        <a href="" class="nav-link">
+        <a href="{{ route('profile')}}" class="nav-link">
         <div class="user-info">
             <span>{{$data->name}}</span>
             <img src="{{ asset('aset/user.png') }}" alt="User Icon" class="user-icon">

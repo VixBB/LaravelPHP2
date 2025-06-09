@@ -92,35 +92,34 @@ a {
 
 
 /* ===== Responsive Mobile ===== */
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     /* Navbar responsive */
     .navbar {
         flex-direction: row;
         justify-content: space-between;
-        padding: 12px 4px;
+        padding: 12px 14px;
     }
 
     .logo img {
-        width: 25px;
+        width: 50px;
     }
 
     .logo span {
-        font-size: 12px;
+        font-size: 25px;
     }
 
     .user-info span {
-        font-size: 12px;
+        font-size: 25px;
     }
 
     .user-icon {
-        width: 24px;
-        height: 24px;
+        width: 50px;
+        height: 50px;
     }
 
     /* Hero section */
     .hero {
-        flex-direction: column;
-        padding: 10px;
+        padding: 15px;
         align-items: center;
         text-align: center;
     }
@@ -128,11 +127,11 @@ a {
     .hero-left,
     .hero-right {
         order: 1;
-        margin-top: 190px;
+        margin-top: 110px;
     }
 
     .hero-left img {
-        width: 55%;
+        width: 75%;
         margin-bottom: 15px;
     }
 
@@ -141,12 +140,12 @@ a {
     }
 
     .hero-text h1 {
-        font-size: 22px;
+        font-size: 40px;
         line-height: 1.0;
     }
 
     .hero-text p {
-        font-size: 14px;
+        font-size: 40px;
     }
 
     .hero-right {
@@ -189,7 +188,7 @@ a {
 }
 
 /* ===== Responsive (Mobile) ===== */
-@media (max-width: 768px) {
+@media (max-width: 380px) {
     .alur-section {
         padding: 40px 15px;
     }
@@ -284,7 +283,7 @@ a {
 }
 
 /* ===== Responsive Mobile (≤768px) ===== */
-@media (max-width: 768px) {
+@media (max-width: 380px) {
   .laptop-container {
     display: flex;
     flex-wrap: wrap;
@@ -362,7 +361,7 @@ a {
 
 
 /* RESPONSIF UNTUK MOBILE */
-@media (max-width: 600px) {
+@media (max-width: 380px) {
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
