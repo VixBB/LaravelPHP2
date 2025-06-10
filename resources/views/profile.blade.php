@@ -60,6 +60,12 @@
                         <img src="{{ secure_asset('aset/laptop.png') }}" alt="Default Laptop Image" class="user-icon">
                     @endif
                     <p>{{ $pinjam->laptop ? $pinjam->laptop->merk . ' ' . $pinjam->laptop->tipe : 'Laptop tidak tersedia' }}</p>
+
+                        @if($d->status == 'dipinjam')
+                          <span class="badge badge-warning">Dipinjam</span>
+                        @elseif($d->status == 'dikembalikan')
+                          <span class="badge badge-success">Dikembalikan</span>
+                        @endif
                 </div>
             @endforeach
         </div>
