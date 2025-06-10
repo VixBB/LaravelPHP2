@@ -61,9 +61,9 @@
                     @endif
                     <p>{{ $pinjam->laptop ? $pinjam->laptop->merk . ' ' . $pinjam->laptop->tipe : 'Laptop tidak tersedia' }}</p>
 
-                        @if($d->status == 'dipinjam')
+                        @if($pinjam->->laptop->status == 'dipinjam')
                           <span class="badge badge-warning">Dipinjam</span>
-                        @elseif($d->status == 'dikembalikan')
+                        @elseif($pinjam->laptop->status == 'tersedia')
                           <span class="badge badge-success">Dikembalikan</span>
                         @endif
                 </div>

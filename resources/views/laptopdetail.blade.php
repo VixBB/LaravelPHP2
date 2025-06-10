@@ -45,7 +45,7 @@
              <li><strong>Port:</strong> {{$laptop->port}}</li>
             </ul>
             <p class="detail-desc">
-                {{ $laptop->deskripsi}}
+                {{ $laptop->deskripsi   }}
             </p>
             <form action="{{ route('pinjam') }}" method="POST">
             @csrf
